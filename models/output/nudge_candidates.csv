@@ -1,0 +1,5 @@
+action_name,feature,baseline_value,recommended_value,expected_production_t,production_gain_t,expected_shortfall_t,shortfall_reduction_t,feasible,constraint_notes,rank
+Increase development progress,development_m,18.5323,19.2374,69200.0,606.6,2788.9,606.6,True,Within operational bounds,1
+Improve fleet availability,fleet_availability,0.9289,0.957,69008.6,415.2,2980.3,415.2,True,Within operational bounds,2
+Reduce equipment downtime,fleet_downtime_h,15.357,10.54,68756.9,163.5,3232.0,163.5,True,Within operational bounds,3
+Increase available workforce,available_workers,87.8667,90.9667,68623.5,30.1,3365.4,30.1,True,Within operational bounds,4

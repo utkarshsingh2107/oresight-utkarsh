@@ -1,0 +1,18 @@
+{
+  "total_blocks": 2240,
+  "ore_blocks": 498,
+  "waste_blocks": 1742,
+  "declared_reserve_t": 48271696.4,
+  "average_ore_mn_pct": 25.246,
+  "min_estimated_mn_pct": 0.0,
+  "max_estimated_mn_pct": 42.301,
+  "mean_kriging_variance": 178.3158,
+  "mn_cutoff_pct": 20.0,
+  "provenance": "SYNTHETIC demonstration blocks/boreholes \u2014 not real MOIL data",
+  "variogram": {
+    "nugget": 9.8984,
+    "partial": 188.0688,
+    "range": 224.3448,
+    "sill": 197.9671
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "overall_shortfall_probability": 0.8837,
+  "risk_level": "CRITICAL",
+  "forecast_horizon_days": 30,
+  "expected_production_t": 68593.4,
+  "planned_production_t": 71988.9,
+  "expected_shortfall_t": 3395.5,
+  "top_risk_drivers": [
+    {
+      "feature": "planned_t",
+      "mean_absolute_shap": 97.162404,
+      "impact_direction": "DOWN",
+      "importance_rank": 1,
+      "driver_type": "ACTIONABLE"
+    },
+    {
+      "feature": "rainfall_mm",
+      "mean_absolute_shap": 41.930242,
+      "impact_direction": "DOWN",
+      "importance_rank": 2,
+      "driver_type": "CONTEXTUAL"
+    },
+    {
+      "feature": "fleet_availability",
+      "mean_absolute_shap": 24.237012,
+      "impact_direction": "DOWN",
+      "importance_rank": 3,
+      "driver_type": "ACTIONABLE"
+    },
+    {
+      "feature": "development_m",
+      "mean_absolute_shap": 17.547648,
+      "impact_direction": "DOWN",
+      "importance_rank": 4,
+      "driver_type": "ACTIONABLE"
+    },
+    {
+      "feature": "delay_h",
+      "mean_absolute_shap": 16.97992,
+      "impact_direction": "DOWN",
+      "importance_rank": 5,
+      "driver_type": "ACTIONABLE"
+    }
+  ],
+  "actionable_drivers": [
+    {
+      "feature": "planned_t",
+      "mean_absolute_shap": 97.162404,
+      "impact_direction": "DOWN",
+      "importance_rank": 1,
+      "driver_type": "ACTIONABLE"
+    },
+    {
+      "feature": "fleet_availability",
+      "mean_absolute_shap": 24.237012,
+      "impact_direction": "DOWN",
+      "importance_rank": 3,
+      "driver_type": "ACTIONABLE"
+    },
+    {
+      "feature": "development_m",
+      "mean_absolute_shap": 17.547648,
+      "impact_direction": "DOWN",
+      "importance_rank": 4,
+      "driver_type": "ACTIONABLE"
+    },
+    {
+      "feature": "delay_h",
+      "mean_absolute_shap": 16.97992,
+      "impact_direction": "DOWN",
+      "importance_rank": 5,
+      "driver_type": "ACTIONABLE"
+    },
+    {
+      "feature": "fleet_downtime_h",
+      "mean_absolute_shap": 10.317971,
+      "impact_direction": "DOWN",
+      "importance_rank": 7,
+      "driver_type": "ACTIONABLE"
+    }
+  ],
+  "contextual_drivers": [
+    {
+      "feature": "rainfall_mm",
+      "mean_absolute_shap": 41.930242,
+      "impact_direction": "DOWN",
+      "importance_rank": 2,
+      "driver_type": "CONTEXTUAL"
+    },
+    {
+      "feature": "soil_moisture",
+      "mean_absolute_shap": 15.665439,
+      "impact_direction": "DOWN",
+      "importance_rank": 6,
+      "driver_type": "CONTEXTUAL"
+    },
+    {
+      "feature": "LST",
+      "mean_absolute_shap": 7.282246,
+      "impact_direction": "DOWN",
+      "importance_rank": 9,
+      "driver_type": "CONTEXTUAL"
+    },
+    {
+      "feature": "day_of_year",
+      "mean_absolute_shap": 4.128713,
+      "impact_direction": "DOWN",
+      "importance_rank": 12,
+      "driver_type": "CONTEXTUAL"
+    },
+    {
+      "feature": "NDVI",
+      "mean_absolute_shap": 1.668655,
+      "impact_direction": "DOWN",
+      "importance_rank": 22,
+      "driver_type": "CONTEXTUAL"
+    }
+  ],
+  "shap_note": "SHAP values measure model feature attribution. They reflect learned statistical patterns in the synthetic data, not proof of real-world causation.",
+  "risk_thresholds": {
+    "LOW": [
+      0.0,
+      0.25
+    ],
+    "MEDIUM": [
+      0.25,
+      0.5
+    ],
+    "HIGH": [
+      0.5,
+      0.75
+    ],
+    "CRITICAL": [
+      0.75,
+      1.0
+    ]
+  },
+  "provenance": "Derived from SYNTHETIC DEMO-01 data \u2014 not real MOIL data"
+}

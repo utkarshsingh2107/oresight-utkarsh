@@ -1,0 +1,22 @@
+{
+  "declared_reserve_t": 48271696.4,
+  "effective_accessible_reserve_t": 32736929.4,
+  "accessibility_ratio": 0.6782,
+  "accessible_blocks": 339,
+  "total_ore_blocks": 498,
+  "inaccessible_blocks": 159,
+  "constraints": {
+    "development_ready_z_threshold_m": 192.0,
+    "equipment_availability_threshold": 0.85,
+    "weather_rainfall_threshold_mm": 30.0,
+    "equipment_available_mine_wide": true,
+    "weather_feasibility_score": 0.9434
+  },
+  "provenance": "Derived from SYNTHETIC PRISM outputs and DEMO-01 operational data",
+  "assumptions": [
+    "Development readiness based on block elevation (z <= 192m)",
+    "Equipment availability assessed mine-wide (mean daily fleet availability)",
+    "Weather feasibility applied probabilistically based on rainfall days",
+    "All three constraints (development AND equipment AND weather) must be satisfied"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "status": "success",
+  "provenance": "SYNTHETIC DEMO-01 data \u2014 not real MOIL operational data",
+  "baseline": {
+    "expected_production_t": 68593.4,
+    "planned_production_t": 71988.9,
+    "expected_shortfall_t": 3395.5,
+    "shortfall_probability": 0.8837,
+    "fleet_availability": 0.9289,
+    "fleet_downtime_h": 15.36,
+    "delay_h": 0.0,
+    "development_m": 18.53,
+    "available_workers": 87.9
+  },
+  "best_action": {
+    "action_name": "Increase development progress",
+    "feature": "development_m",
+    "baseline_value": 18.5323,
+    "recommended_value": 19.2374,
+    "expected_production_t": 69200.0,
+    "expected_production_gain_t": 606.6,
+    "expected_shortfall_t": 2788.9,
+    "expected_shortfall_reduction_t": 606.6,
+    "new_expected_shortfall_t": 2788.9,
+    "new_shortfall_probability": 0.8803,
+    "feasible": true,
+    "rationale": "Allocate additional development crews and prioritise access headings to increase daily advance."
+  },
+  "optimization": {
+    "objective": "minimize_expected_shortfall",
+    "method": "PuLP CBC \u2014 binary selection over counterfactual candidates",
+    "candidates_evaluated": 4,
+    "feasible_candidates": 4
+  },
+  "constraints": [
+    "fleet_availability \u2264 0.957 (p95 of historical daily mean)",
+    "fleet_downtime_h \u2265 10.54 h (p10 of historical daily total)",
+    "development_m \u2264 19.59 m/day (p90 of historical daily metres)",
+    "available_workers \u2264 92 (historical maximum)",
+    "EAR constraint: 30-day forecast \u2264 32,736,929 t",
+    "All recommendations are single-lever; other features held at baseline"
+  ],
+  "excluded_levers": {
+    "planned_t": "External planning input; not an operational lever",
+    "delay_h": "Already 0.0 h in forecast period \u2014 no upside available",
+    "shifts": "Already at maximum (3 shifts) in forecast period",
+    "lag/rolling": "Derived from historical actual_t; not directly controllable"
+  },
+  "assumptions": [
+    "Counterfactual scoring uses the PULSE P50 LightGBM model as response surface",
+    "Only the target feature is perturbed; all others held at their actual test-period values",
+    "Production gain estimated as mean daily prediction difference \u00d7 30 days",
+    "New shortfall probability estimated using P10/P50/P90 quantile models",
+    "Bounds derived from full historical data distributions (p10/p90/p95/max)",
+    "One intervention at a time \u2014 combined multi-lever effects not evaluated"
+  ]
+}

@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Generated artifacts (keep folder structure; ignore contents except README / gitkeep)
+models/*.pkl
+models/*.joblib
+models/*.pt
+models/*.h5
+
+# Local data dumps (raw/processed stay tracked only if committed explicitly)
+*.parquet
+*.h5
+*.hdf5
+!data/README.md
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/

@@ -1,0 +1,59 @@
+{
+  "model": "LightGBM Quantile Regression",
+  "forecast_horizon_days": 30,
+  "training_period": {
+    "start": "2023-01-31",
+    "end": "2025-10-02",
+    "days": 976
+  },
+  "validation_period": {
+    "start": "2025-10-03",
+    "end": "2025-12-01",
+    "days": 60
+  },
+  "forecast_period": {
+    "start": "2025-12-02",
+    "end": "2025-12-31",
+    "days": 30
+  },
+  "validation_metrics": {
+    "P10": {
+      "MAE": 95.42,
+      "RMSE": 116.95,
+      "MAPE": 4.1
+    },
+    "P50": {
+      "MAE": 61.33,
+      "RMSE": 77.41,
+      "MAPE": 2.66
+    },
+    "P90": {
+      "MAE": 97.63,
+      "RMSE": 121.99,
+      "MAPE": 4.42
+    }
+  },
+  "forecast_summary": {
+    "total_planned_production_t": 71988.9,
+    "total_p10_production_t": 66322.2,
+    "total_p50_production_t": 68593.4,
+    "total_p90_production_t": 71073.7,
+    "total_expected_production_t": 68593.4,
+    "total_expected_shortfall_t": 3395.5,
+    "overall_shortfall_probability": 0.8837
+  },
+  "ear_integration": {
+    "accessible_reserve_t": 32736929.4,
+    "ear_constraint_applied": false,
+    "forecast_respects_ear": true
+  },
+  "assumptions": [
+    "Production forecast uses historical operational patterns (equipment, weather, development, etc.)",
+    "Quantile regression provides P10/P50/P90 uncertainty bands",
+    "Chronological train/validation split prevents data leakage",
+    "Shortfall probability interpolated from quantile distribution",
+    "EAR accessible reserve acts as operational capacity constraint",
+    "Forecast period uses last 30 days of validation set for MVP demonstration"
+  ],
+  "provenance": "Derived from SYNTHETIC DEMO-01 operational data \u2014 not real MOIL data"
+}
